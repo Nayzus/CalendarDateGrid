@@ -27,7 +27,7 @@ public struct DateGrid<DateView>: View where DateView: View {
     
     public var body: some View {
         
-        ScrollView {
+        Group {
             if case .month( _) = viewModel.mode {
                 
                 TabView(selection: $selectedMonth) {
@@ -94,14 +94,12 @@ public struct DateGrid<DateView>: View where DateView: View {
                             .tag(week)
                         }
                     }
-                    .frame(height: weekContentHeight, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(height: weekContentHeight, alignment: .center)
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 }
             }
         }
-        .onAppear(perform: {
-            UIScrollView.appearance().bounces = false
-        })
+ 
     
     }
     
