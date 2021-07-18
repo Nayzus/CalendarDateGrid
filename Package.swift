@@ -24,8 +24,5 @@ let package = Package(
         .target(
             name: "DateGrid",
             dependencies: []),
-        .testTarget(
-            name: "DateGridTests",
-            dependencies: ["DateGrid"]),
     ]
 )

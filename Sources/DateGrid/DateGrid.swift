@@ -27,7 +27,7 @@ public struct DateGrid<DateView>: View where DateView: View {
     
     public var body: some View {
         
-        Group {
+        ScrollView {
             if case .month( _) = viewModel.mode {
                 
                 TabView(selection: $selectedMonth) {
@@ -99,6 +99,10 @@ public struct DateGrid<DateView>: View where DateView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            UIScrollView.appearance().bounces = false
+        })
+    
     }
     
     //MARK: constant and supportive methods
