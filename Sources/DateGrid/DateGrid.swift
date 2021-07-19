@@ -61,7 +61,7 @@ public struct DateGrid<DateView>: View where DateView: View {
                         }
                     }
                 }
-                .frame(height: monthContentHeight, alignment: .center)
+                .frame(height: viewModel.mode.estimateHeight, alignment: .center)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
             } else {
@@ -94,7 +94,7 @@ public struct DateGrid<DateView>: View where DateView: View {
                             .tag(week)
                         }
                     }
-                    .frame(height: weekContentHeight, alignment: .center)
+                    .frame(height: viewModel.mode.estimateHeight, alignment: .center)
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 }
             }
