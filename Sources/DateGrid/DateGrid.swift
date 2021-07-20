@@ -84,7 +84,7 @@ public struct DateGrid<DateView>: View where DateView: View {
                                                 }))
                                     } else {
                                         content(date)
-                                            .opacity(0.5)
+                                           
                                     }
                                 }
                             }
