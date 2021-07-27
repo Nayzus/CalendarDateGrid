@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-public struct DateGrid<DateView>: View, Equatable where DateView: View {
-    public static func == (lhs: DateGrid<DateView>, rhs: DateGrid<DateView>) -> Bool {
-        lhs.viewModel.interval == rhs.viewModel.interval
-    }
+public struct DateGrid<DateView>: View where DateView: View {
+
     /// DateStack view
     /// - Parameters:
     ///   - interval:
